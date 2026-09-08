@@ -7,6 +7,14 @@ app.get('/hello', (req, res) => {
   res.json({ message: 'Hello!'});
 })
 
+app.get('/profile', (req, res) => {
+  res.json({
+    name: 'Federico',
+    role: 'IT extraordinaire',
+    favouriteSong: 'The Chicken Song'
+  })
+})
+
 app.post('/data', (req, res) => {
   res.json(req.body);
 })
