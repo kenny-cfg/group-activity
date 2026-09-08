@@ -19,6 +19,14 @@ app.post('/data', (req, res) => {
   res.json(req.body);
 })
 
+app.post('/echo', (req, res) => {
+  const body = req.body;
+  res.json({
+    ...body,
+    status: 'received'
+  })
+})
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 })
