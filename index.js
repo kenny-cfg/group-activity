@@ -6,6 +6,11 @@ app.use(express.json());
 app.get('/hello', (req, res) => {
   res.json({ message: 'Hello!'});
 })
+
+app.post('/data', (req, res) => {
+  res.json(req.body);
+})
+
 app.listen(port, () => {
   console.log(`Listening on port ${port}`);
 })
